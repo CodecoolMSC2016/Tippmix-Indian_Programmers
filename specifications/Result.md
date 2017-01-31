@@ -1,18 +1,17 @@
-# Mentor
+# Result
 
 ## Description
-This class represents a mentor @ Codecool.
+Stores the result of the simulation. It has getters and setters to read and write its members (data class).
 
 ## Parent class
-Person
+None
 
 ## Attributes
-* ```nickname```
-  * data type: string
-  * description: stores the mentors secret nickname between students
+None
 
 ## Class methods
-### ```create_by_csv```
-Gets a csv file path as an argument and gives back a list of students. 
+### ```get...```
+Gets a ... 
 
-## Instance methods
+### ```set...```
+Sets a ... 

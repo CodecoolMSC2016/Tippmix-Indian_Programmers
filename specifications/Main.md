@@ -1,4 +1,4 @@
-# CodecoolClass
+# Main Class
 
 ## Description
 Starts the application. Able to configure the round of the simulations by taking it from the command line argument.
