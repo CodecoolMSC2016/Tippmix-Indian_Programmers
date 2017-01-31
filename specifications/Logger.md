@@ -1,36 +1,33 @@
-# Person
+# Logger
 
 ## Description
-This Class logs all the information to the console regarding the past Events.
+It writes information to the console. Only this class can contain calls to System.out.println().
 
 ## Parent Class
-Simulation
+None
 
 ## Attributes
-* ```home_team```
-  * data type: string
-  * description:stores name of the home team
-* ```guest_team```
-  * data type: string
-  * description: stores name of the guest team
-* ```home_team_score```
-  * data type: integer
-  * description: stores the number of goals the home team scored
-* ```guest_team_score```
-  * data type: integer
-  * description: stores the number of goals the guest team scored
-* ```odds```
-  * data type: integer
-  * description: stores the odds for the guest team to beat home team
-
-
-
-
-
+None
 
 ## Class methods
 None
 
 ## Instance methods
-### ```__init__```
-The constructor of the object.
+
+### ```log(String type, String message)```
+It writes to the console in a formatted way.
+E.g. TimeStamp Type Message
+The TimeStamp can be hardcoded to today's date, otherwise try and use java.util.Date (this is optional). 
+
+#### Arguments
+* ```type```
+  * data_type: String
+  * description: 
+
+* ```message```
+  * data_type: String
+  * description: 
+
+
+
+
