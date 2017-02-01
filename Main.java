@@ -2,7 +2,7 @@ public class Main{
 
 	public static Simulation generateSimulation(int round){
 		// returns a Simulation instance
-		Simulation sim = new Simulation();
+		Simulation sim = new Simulation(round);
 		return sim;	
 	}
 
@@ -11,8 +11,8 @@ public class Main{
 		Simulator simulator =  new Simulator(generateSimulation(), logger);
 		simulator.run();
 		*/
-		Simulation sim = new Simulation();
-		sim.load();
+		Simulator simulator = new Simulator(generateSimulation(10));
+		
 	}
 	
 	
