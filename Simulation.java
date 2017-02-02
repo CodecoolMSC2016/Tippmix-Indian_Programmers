@@ -20,7 +20,7 @@ public class Simulation {
 			String team2=data[teamnumber.nextInt(data.length -1)];
 			String force2=team2.split("\t")[1];
 			team2 = team2.split("\t")[0];
-			double odds = Integer.parseInt(force1)/Integer.parseInt(force2);
+			float odds = (float)Integer.parseInt(force1)/Integer.parseInt(force2);
 			teams.add(team1 + ": " + team2 + ":"+ score.nextInt(10) + ":"+ score.nextInt(10)+ ":" + odds);
 			teamPairs.add(teams);
 			teams = new ArrayList<String>();
