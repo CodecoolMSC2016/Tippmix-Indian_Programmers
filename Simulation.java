@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.Random;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 
 public class Simulation {
@@ -11,7 +12,7 @@ public class Simulation {
 		teamPairs = new ArrayList<String>();
 		Random teamnumber = new Random();
 		Random score= new Random();
-		load();
+		load("Teams.csv");
 		for(int i = 0; i < rounds; i++) {
 			String team1=data[teamnumber.nextInt(data.length -1)];
 			String force1=team1.split("\t")[1];
@@ -26,9 +27,9 @@ public class Simulation {
 		System.out.println(teamPairs);
 	} 
 
-	public static void load() {
+	public static void load(String filename) {
 		try {		
-			FileReader in = new FileReader("Teams.csv");
+			FileReader in = new FileReader(filename);
 			int c = 0;
 			String text = null;			
 			while (c != -1){
@@ -42,7 +43,16 @@ public class Simulation {
 		} catch(IOException e) {}
 
 	}
-	public void generateData() {
+	//public String checkTeamChances(String Home_Team,String Guest_Team){}
+	public void generateData()
+	{try{
+    	PrintWriter writer = new PrintWriter("History.csv", "UTF-8");
+	int serial=0;
+    	for(String matches:teamPairs){
+		serial++;
+		writer.println(serial + ". " +matches);}
+    		writer.close();
+	} catch (IOException e) {}
 		//Write simulated round to CSV file.
 		
 	}

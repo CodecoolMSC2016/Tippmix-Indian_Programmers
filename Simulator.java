@@ -20,15 +20,16 @@ public class Simulator {
 		//	log.print(team.get(1).toString());
 		//}
 		Result result = new Result();
-		result.addTeam(teamPairs.get(0));
+		//result.addTeam(teamPairs.get(0));
 		
-		
+	/*public String checkTeamChances(String Home_Team,String Guest_Team){}
+
 	}
 	public static void estimateWinPrize(int InitialBet){
 		float estimationalOdds = 0.0f;
 		for (String match:teamPairs){
 			String[] odds=match.split(":");
 		estimationalOdds+=Float.parseFloat(odds[(odds.length-1)]);
-		System.out.print(estimationalOdds);}
+		System.out.print(estimationalOdds);}*/
 }
 }
