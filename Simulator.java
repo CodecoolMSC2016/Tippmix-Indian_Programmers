@@ -1,13 +1,15 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Simulator {
-	public ArrayList<ArrayList<String>> teamPairs;
+	public static ArrayList<ArrayList<String>> teamPairs;
 	public Logger log;
 	public float odds;
 	
 	Simulator(Simulation simulation, Logger logger){ // add Logger paramater
 		this.teamPairs = simulation.teamPairs;
 		this.log = logger;
+		
 		
 		
 	}
@@ -21,8 +23,12 @@ public class Simulator {
 		result.addTeam(teamPairs.get(0));
 		
 		
-		 
-			
-		
 	}
+	public static void estimateWinPrize(int InitialBet){
+		float estimationalOdds = 0.0f;
+		for (ArrayList<String> match:teamPairs){
+			String[] odds=match.split(":");
+		estimationalOdds+=(float)odds[(odds.length-1)];
+		System.out.print(estimationalOdds);}
+}
 }
