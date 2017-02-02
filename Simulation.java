@@ -24,7 +24,7 @@ public class Simulation {
 			String MatchData=team1 + ": " + team2 + ":"+ score.nextInt(10) + ":"+ score.nextInt(10)+ ":" + odds;
 			teamPairs.add(MatchData);
 		}
-		System.out.println(teamPairs);
+		
 	} 
 
 	public static void load(String filename) {

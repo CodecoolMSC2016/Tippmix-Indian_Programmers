@@ -12,14 +12,13 @@ public class Logger{
 			System.out.print(str);
 		}
 	}
+	public void printTeamTable(String[] input){
+	int TeamNumber = 1;
+	for(String elements:input){
+	System.out.println(TeamNumber + ". " + elements);
+	TeamNumber++;}
+	
 
-	public void generateHistory()
-	{try{
-    	PrintWriter writer = new PrintWriter("History.csv", "UTF-8");
-    	for(String matches:teamPairs){
-		writer.println(matches);
-    		writer.close();
-	}} catch (IOException e) {}
    // do something
 }
 		

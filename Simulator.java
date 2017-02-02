@@ -5,21 +5,19 @@ public class Simulator {
 	public static ArrayList<String> teamPairs;
 	public Logger log;
 	public float odds;
+	public String[] data;
 	
 	Simulator(Simulation simulation, Logger logger){ // add Logger paramater
 		this.teamPairs = simulation.teamPairs;
 		this.log = logger;
+		this.data = simulation.data;
 		
 		
 		
 	}
 		
 	public void run(){
-		//for (ArrayList team: teamPairs){			
-		//	log.print(team.get(0).toString());
-		//	log.print(team.get(1).toString());
-		//}
-		Result result = new Result();
+	log.printTeamTable(data);
 		//result.addTeam(teamPairs.get(0));
 		
 	/*public String checkTeamChances(String Home_Team,String Guest_Team){}
