@@ -5,7 +5,7 @@ public class Result {
 	private HashMap<String, Integer> results;
 
 
-	public void addTeam(ArrayList<String> match){
+	public void addTeam(String match){
 		System.out.print(match);
 	}
 

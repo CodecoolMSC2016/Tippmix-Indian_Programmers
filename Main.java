@@ -13,7 +13,7 @@ public class Main{
 		*/
 		Logger log = new Logger();
 		Simulator simulator = new Simulator(generateSimulation(10), log);
-		simulator.run();
+		//simulator.run();
 		simulator.estimateWinPrize(200);
 		
 	}

@@ -5,13 +5,12 @@ import java.util.ArrayList;
 
 public class Simulation {
 	static String[] data;
-	public ArrayList<ArrayList<String>> teamPairs;
+	public ArrayList<String> teamPairs;
 	public float odds;
 	public Simulation(int rounds) {
-		teamPairs = new ArrayList<ArrayList<String>>();
+		teamPairs = new ArrayList<String>();
 		Random teamnumber = new Random();
 		Random score= new Random();
-		ArrayList<String> teams = new ArrayList<String>();
 		load();
 		for(int i = 0; i < rounds; i++) {
 			String team1=data[teamnumber.nextInt(data.length -1)];
@@ -21,9 +20,8 @@ public class Simulation {
 			String force2=team2.split("\t")[1];
 			team2 = team2.split("\t")[0];
 			float odds = (float)Integer.parseInt(force1)/Integer.parseInt(force2);
-			teams.add(team1 + ": " + team2 + ":"+ score.nextInt(10) + ":"+ score.nextInt(10)+ ":" + odds);
-			teamPairs.add(teams);
-			teams = new ArrayList<String>();
+			String MatchData=team1 + ": " + team2 + ":"+ score.nextInt(10) + ":"+ score.nextInt(10)+ ":" + odds;
+			teamPairs.add(MatchData);
 		}
 		System.out.println(teamPairs);
 	} 

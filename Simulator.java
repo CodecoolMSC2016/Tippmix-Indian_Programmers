@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Simulator {
-	public static ArrayList<ArrayList<String>> teamPairs;
+	public static ArrayList<String> teamPairs;
 	public Logger log;
 	public float odds;
 	
@@ -26,9 +26,9 @@ public class Simulator {
 	}
 	public static void estimateWinPrize(int InitialBet){
 		float estimationalOdds = 0.0f;
-		for (ArrayList<String> match:teamPairs){
+		for (String match:teamPairs){
 			String[] odds=match.split(":");
-		estimationalOdds+=(float)odds[(odds.length-1)];
+		estimationalOdds+=Float.parseFloat(odds[(odds.length-1)]);
 		System.out.print(estimationalOdds);}
 }
 }
