@@ -11,7 +11,9 @@ public class Main{
 		Simulator simulator =  new Simulator(generateSimulation(), logger);
 		simulator.run();
 		*/
-		Simulator simulator = new Simulator(generateSimulation(10));
+		Logger log = new Logger();
+		Simulator simulator = new Simulator(generateSimulation(10), log);
+		simulator.run();
 		
 	}
 	
