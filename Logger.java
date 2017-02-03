@@ -12,15 +12,13 @@ public class Logger{
 			System.out.print(str);
 		}
 	}
-	public void printTeamTable(String[] input){
-	int TeamNumber = 1;
-	for(String elements:input){
-	System.out.println(TeamNumber + ". " + elements);
-	TeamNumber++;}
-	
-
-   // do something
+	public void print(String str){
+		System.out.println(str);
+	}
+	public void printTable(ArrayList<String> input){
+		for (String line: input) {
+			print(line);
+			System.out.println();
+		}
+	}
 }
-		
-}
-
