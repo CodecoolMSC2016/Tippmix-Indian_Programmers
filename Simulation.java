@@ -5,6 +5,8 @@ import java.util.ArrayList;
 
 
 public class Simulation {
+	private static final Random PRNG = new Random();
+
 	static String[][] data;
 	ArrayList<String> matchResults;
 	private int rounds;
@@ -26,10 +28,9 @@ public class Simulation {
 	}
 
 	public Integer[] compareTeams() {
-		Random random = new Random();
 		int dataLength = data.length - 1,
-				team1 = random.nextInt(dataLength),
-				team2 = random.nextInt(dataLength),
+				team1 = PRNG.nextInt(dataLength),
+				team2 = PRNG.nextInt(dataLength),
 				stronger,
 				weaker;
 		Integer team1Score = Integer.parseInt(data[team1][SCORE]),
@@ -57,17 +58,17 @@ public class Simulation {
 		double chanceToWin = (strongerScore / weakerScore)*10 + 50;
 
 		if (random.nextInt(100) > chanceToWin) {
-			strCache1 = String.valueOf(strongerScore + random.nextInt(100));
+			strCache1 = String.valueOf(strongerScore + PRNG.nextInt(100));
 			data[stronger][SCORE] = strCache1;
 			winnerName = data[stronger][NAME];
 			loserName = data[weaker][NAME];
-			goalDiff = random.nextInt(5);
+			goalDiff = PRNG.nextInt(5);
 		} else {
-			strCache1 = String.valueOf(weakerScore + random.nextInt(100));
+			strCache1 = String.valueOf(weakerScore + PRNG.nextInt(100));
 			data[weaker][SCORE] = strCache1;
 			winnerName = data[weaker][NAME];
 			loserName = data[stronger][NAME];
-			goalDiff = random.nextInt(3);
+			goalDiff = PRNG.nextInt(3);
 		}
 		matchResults.add(winnerName + " vs. " + loserName +  " ---> "
 				+ winnerName + " won by " + (goalDiff + 1) + " goals!");
