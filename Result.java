@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Result {
+	private static final Random PRNG = new Random();
+
 	private ArrayList<String> matchResults;
 	private String[][] data;
 	private static final int SCORE = 1,
@@ -51,12 +53,11 @@ public class Result {
 	}
 
 	public String[][] getNextMatch(){
-		Random random = new Random();
 		String[] firstTeam,
 				 secondTeam;
 		do {
-			firstTeam = data[random.nextInt(data.length - 1)];
-			secondTeam = data[random.nextInt(data.length - 1)];
+			firstTeam = data[PRNG.nextInt(data.length - 1)];
+			secondTeam = data[PRNG.nextInt(data.length - 1)];
 		}while(firstTeam[NAME].equals(secondTeam[NAME]));
 		String[][] nextMatch =  new String[2][];
 		nextMatch[0] = firstTeam;
